@@ -18,6 +18,9 @@ function AppHeader() {
         <Link to="/movies/upcoming">
           <span>Upcomming</span>
         </Link>
+        <Link to="/favourite">
+          <span>Favourite</span>
+        </Link>
       </div>
     </div>
   );

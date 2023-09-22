@@ -1,0 +1,25 @@
+.container__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+.text__container {
+  text-align: center;
+}
+.button__click {
+  margin: 25px;
+  background-color: transparent; /* Green */
+  border-radius: 15px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition-duration: all 0.4s;
+  cursor: pointer;
+  border: 2px solid #f44336;
+}
+.button__click:hover {
+  background-color: red;
+}

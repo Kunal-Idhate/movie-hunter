@@ -13,7 +13,6 @@ function Home() {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
-      console.log(data.results);
       setpopularMovies(data.results);
     } catch (err) {
       console.log(err);
@@ -36,6 +35,7 @@ function Home() {
         >
           {popularMovies.map((movie) => (
             <Link
+              key={movie.id}
               style={{ textDecoration: "none", color: "white" }}
               to={`/movie/${movie.id}`}
             >

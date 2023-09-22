@@ -3,13 +3,11 @@ import "./card.css";
 import { Link } from "react-router-dom";
 import ReactLoading from "react-loading";
 
-function Card({ movie, addFavMoive }) {
+function FavCard({ movie, removeFavouriteMovie }) {
   const [isLoading, setIsLoading] = useState(true);
-
   const handleClick = (e) => {
-    addFavMoive(movie);
+    removeFavouriteMovie(movie);
   };
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -65,7 +63,7 @@ function Card({ movie, addFavMoive }) {
                   handleClick(e);
                 }}
               >
-                Add to Favourite
+                Remove
               </button>
             </div>
           </div>
@@ -75,4 +73,4 @@ function Card({ movie, addFavMoive }) {
   );
 }
 
-export default Card;
+export default FavCard;
